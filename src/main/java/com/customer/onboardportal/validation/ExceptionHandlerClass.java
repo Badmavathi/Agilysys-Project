@@ -22,8 +22,7 @@ public class ExceptionHandlerClass extends ResponseEntityExceptionHandler {
 	
 	@ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<String> handleIllegalArgumentException(IllegalArgumentException ex) {
-        String errorMessage = "Bad request: Invalid arguments, Please refer service-types and subscription-plans for reference";
-        System.err.println(ex.getStackTrace().toString());
+        String errorMessage = "Bad request: Invalid arguments ";
         return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
     }
 	

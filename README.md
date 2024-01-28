@@ -16,7 +16,8 @@ Before running the project, make sure you have the following installed:
 ### Installation
 
 - Clone the repository:
-	
+
+		https://github.com/Badmavathi/Agilysys-Project.git
 	
 - Build the project:
 
