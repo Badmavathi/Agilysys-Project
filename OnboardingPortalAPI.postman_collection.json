@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "adbb669a-3e77-4a54-bb73-0bf91bc68ab4",
+		"name": "OnboardingPortalAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32524197"
+	},
+	"item": [
+		{
+			"name": "Customer API",
+			"item": [
+				{
+					"name": "GET-FetchAllCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/onboardingPortal/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboardingPortal",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-DeleteOneCustomer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/onboardingPortal/customers/6402",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboardingPortal",
+								"customers",
+								"6402"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-DeleteAllCustomers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/onboardingPortal/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboardingPortal",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-CreateCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Will\",\r\n    \"email\" : \"will@gmail.com\",\r\n    \"streetName\": \"Peachtree street\",\r\n        \"postalCode\": \"30319\",\r\n        \"city\": \"Atlanta\",\r\n        \"state\": \"GA\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/onboardingPortal/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboardingPortal",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST-CreateCustomer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Will\",\r\n    \"email\" : \"will@gmail.com\",\r\n    \"streetName\": \"Peachtree street\",\r\n        \"postalCode\": \"30319\",\r\n        \"city\": \"Atlanta\",\r\n        \"state\": \"GA\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/onboardingPortal/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"onboardingPortal",
+										"customers"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "PUT-UpdateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"abc\",\r\n    \"email\" : \"abc@gmail.com\",\r\n    \"streetName\": \"abc street\",\r\n        \"postalCode\": \"30390\",\r\n        \"city\": \"Atlanta\",\r\n        \"state\": \"GA\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/onboardingPortal/customers/6402",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboardingPortal",
+								"customers",
+								"6402"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-FetchOneCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/onboardingPortal/customers/6402",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboardingPortal",
+								"customers",
+								"6402"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Contains all the endpoints for Customer API"
+		},
+		{
+			"name": "Subscription API",
+			"item": [
+				{
+					"name": "PUT-Subscribe",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\" : 6402,\r\n    \"type\" : \"STORAGE\",\r\n    \"plan\" : \"BASIC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customerSubscription/subscribe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customerSubscription",
+								"subscribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT-PauseSubscription",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\" : 6402,\r\n    \"type\" : \"STORAGE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customerSubscription/pauseSubscription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customerSubscription",
+								"pauseSubscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT-ResumeSubscription",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\" : 6402,\r\n    \"type\" : \"STORAGE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customerSubscription/resumeSubscription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customerSubscription",
+								"resumeSubscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-SubscriptionPlans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customerSubscription/subscription-plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customerSubscription",
+								"subscription-plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-ServiceTypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customerSubscription/service-types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customerSubscription",
+								"service-types"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Contains all the endpoints for Subscription API"
+		}
+	]
+}
