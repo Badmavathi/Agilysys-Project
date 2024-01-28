@@ -103,3 +103,6 @@ The API supports the following endpoints:
 			8. Adjust configurations, logging levels, and other settings for production deployment.
 			9. Implement strategies for handling sensitive information in production.
 			10.Consider implementing internationalization and localization for supporting multiple languages and regions(time zone). 
+
+### Postman : 
+		Endpoints can be tested from Postman. Postman_collection.json is available in the project, which can be imported directly to Postman to run all the endpoints.
