@@ -1,6 +1,8 @@
 # Customer Onboarding Portal API
 
 Welcome to the Customer Onboarding Portal API project! This API is designed for managing customer subscriptions to cloud software services.
+Using the below endpoints, Customers can be created, updated and deleted. Once customer is created, customer can be subscribed to cloud software services for any service plans
+(available services and plans can be found in different endpoints), furthermore subscriptions can be paused and resumed at any given time.
 
 
 ## Getting Started
